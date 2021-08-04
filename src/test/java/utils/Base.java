@@ -30,13 +30,13 @@ public class Base {
         return driver;
     }
 
-//    @After
-//    //Close the browser
-//    public void tearDown() {
-//        if (driver != null) {
-//            driver.quit();
-//        }
-//    }
+    @After
+    //Close the browser
+    public void tearDown() {
+        if (driver != null) {
+            driver.close();
+        }
+    }
 
 
 }
