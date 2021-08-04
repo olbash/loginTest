@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="11.162">
-    <testcase classname="Application login" name="log in using valid credentials" time="3.603">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="10.987">
+    <testcase classname="Application login" name="log in using valid credentials" time="3.587">
         <system-out>
             <![CDATA[Given User is on the login page - verify "Welcome, Please Sign In!" displayed on the page.passed
 When user enter valid credentials and clicks on the Login button............passed
@@ -8,7 +8,7 @@ Then Home page appears......................................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Application login" name="log in using invalid email and valid pwd" time="2.468">
+    <testcase classname="Application login" name="log in using invalid email and valid pwd" time="2.511">
         <system-out>
             <![CDATA[Given User is on the login page - verify "Welcome, Please Sign In!" displayed on the page.passed
 When user enters invalid email and valid pwd and clicks on the Login button.passed
@@ -16,7 +16,7 @@ Then error message "No customer account found" appears......................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Application login" name="log in using valid email and invalid pwd" time="2.468">
+    <testcase classname="Application login" name="log in using valid email and invalid pwd" time="2.479">
         <system-out>
             <![CDATA[Given User is on the login page - verify "Welcome, Please Sign In!" displayed on the page.passed
 When user enters valid email and invalid pwd and clicks on the Login button.passed
@@ -24,7 +24,7 @@ Then the error message "The credentials provided are incorrect" appears.....pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Application login" name="log in with email and password fields blank" time="2.496">
+    <testcase classname="Application login" name="log in with email and password fields blank" time="2.284">
         <system-out>
             <![CDATA[Given User is on the login page - verify "Welcome, Please Sign In!" displayed on the page.passed
 When user leaves email and pwd fields blank and clicks on the Login button..passed

@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-08-04T13:10:03.623Z",
+        "start_timestamp": "2021-08-04T13:47:16.239Z",
         "line": 3,
         "name": "log in using valid credentials",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2395107000,
+              "duration": 2361575000,
               "status": "passed"
             },
             "line": 4,
@@ -31,7 +31,7 @@
           },
           {
             "result": {
-              "duration": 1107749800,
+              "duration": 1115470000,
               "status": "passed"
             },
             "line": 5,
@@ -43,7 +43,7 @@
           },
           {
             "result": {
-              "duration": 36900100,
+              "duration": 42237900,
               "status": "passed"
             },
             "line": 6,
@@ -56,7 +56,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-08-04T13:10:07.238Z",
+        "start_timestamp": "2021-08-04T13:47:19.834Z",
         "line": 8,
         "name": "log in using invalid email and valid pwd",
         "description": "",
@@ -66,7 +66,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1822419700,
+              "duration": 1851314700,
               "status": "passed"
             },
             "line": 9,
@@ -84,7 +84,7 @@
           },
           {
             "result": {
-              "duration": 615289800,
+              "duration": 619692600,
               "status": "passed"
             },
             "line": 10,
@@ -96,7 +96,7 @@
           },
           {
             "result": {
-              "duration": 27926400,
+              "duration": 39891900,
               "status": "passed"
             },
             "line": 11,
@@ -115,7 +115,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-08-04T13:10:09.709Z",
+        "start_timestamp": "2021-08-04T13:47:22.349Z",
         "line": 13,
         "name": "log in using valid email and invalid pwd",
         "description": "",
@@ -125,7 +125,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1834091500,
+              "duration": 1853036200,
               "status": "passed"
             },
             "line": 14,
@@ -143,7 +143,7 @@
           },
           {
             "result": {
-              "duration": 597401500,
+              "duration": 591415600,
               "status": "passed"
             },
             "line": 15,
@@ -155,7 +155,7 @@
           },
           {
             "result": {
-              "duration": 36900300,
+              "duration": 34907100,
               "status": "passed"
             },
             "line": 16,
@@ -174,7 +174,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-08-04T13:10:12.182Z",
+        "start_timestamp": "2021-08-04T13:47:24.832Z",
         "line": 18,
         "name": "log in with email and password fields blank",
         "description": "",
@@ -184,7 +184,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2104369900,
+              "duration": 1899907800,
               "status": "passed"
             },
             "line": 19,
@@ -202,7 +202,7 @@
           },
           {
             "result": {
-              "duration": 350062300,
+              "duration": 340090000,
               "status": "passed"
             },
             "line": 20,
@@ -214,7 +214,7 @@
           },
           {
             "result": {
-              "duration": 40890000,
+              "duration": 43880000,
               "status": "passed"
             },
             "line": 21,
