@@ -1,0 +1,243 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-08-04T13:10:03.623Z",
+        "line": 3,
+        "name": "log in using valid credentials",
+        "description": "",
+        "id": "application-login;log-in-using-valid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2395107000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User is on the login page - verify \"Welcome, Please Sign In!\" displayed on the page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome, Please Sign In!\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepsDefinition.LoginTest.userIsOnTheLoginPageVerifyDisplayedOnThePage(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1107749800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user enter valid credentials and clicks on the Login button",
+            "match": {
+              "location": "stepsDefinition.LoginTest.userEnterValidCredentialsAndClicksOnTheLoginButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 36900100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Home page appears",
+            "match": {
+              "location": "stepsDefinition.LoginTest.homePageAppears()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-04T13:10:07.238Z",
+        "line": 8,
+        "name": "log in using invalid email and valid pwd",
+        "description": "",
+        "id": "application-login;log-in-using-invalid-email-and-valid-pwd",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1822419700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User is on the login page - verify \"Welcome, Please Sign In!\" displayed on the page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome, Please Sign In!\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepsDefinition.LoginTest.userIsOnTheLoginPageVerifyDisplayedOnThePage(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 615289800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user enters invalid email and valid pwd and clicks on the Login button",
+            "match": {
+              "location": "stepsDefinition.LoginTest.userEntersInvalidEmailAndValidPwdAndClicksOnTheLoginButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 27926400,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "error message \"No customer account found\" appears",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"No customer account found\"",
+                  "offset": 14
+                }
+              ],
+              "location": "stepsDefinition.LoginTest.errorMessageAppears(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-04T13:10:09.709Z",
+        "line": 13,
+        "name": "log in using valid email and invalid pwd",
+        "description": "",
+        "id": "application-login;log-in-using-valid-email-and-invalid-pwd",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1834091500,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "User is on the login page - verify \"Welcome, Please Sign In!\" displayed on the page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome, Please Sign In!\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepsDefinition.LoginTest.userIsOnTheLoginPageVerifyDisplayedOnThePage(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 597401500,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user enters valid email and invalid pwd and clicks on the Login button",
+            "match": {
+              "location": "stepsDefinition.LoginTest.userEntersValidEmailAndInvalidPwdAndClicksOnTheLoginButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 36900300,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the error message \"The credentials provided are incorrect\" appears",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"The credentials provided are incorrect\"",
+                  "offset": 18
+                }
+              ],
+              "location": "stepsDefinition.LoginTest.theErrorMessageAppears(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-04T13:10:12.182Z",
+        "line": 18,
+        "name": "log in with email and password fields blank",
+        "description": "",
+        "id": "application-login;log-in-with-email-and-password-fields-blank",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2104369900,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "User is on the login page - verify \"Welcome, Please Sign In!\" displayed on the page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Welcome, Please Sign In!\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepsDefinition.LoginTest.userIsOnTheLoginPageVerifyDisplayedOnThePage(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 350062300,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user leaves email and pwd fields blank and clicks on the Login button",
+            "match": {
+              "location": "stepsDefinition.LoginTest.userLeavesEmailAndPwdFieldsBlankAndClicksOnTheLoginButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 40890000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "error message \"No customer account found\" appears",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"No customer account found\"",
+                  "offset": 14
+                }
+              ],
+              "location": "stepsDefinition.LoginTest.errorMessageAppears(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Application login",
+    "description": "",
+    "id": "application-login",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/loginTest.feature",
+    "tags": []
+  }
+]
