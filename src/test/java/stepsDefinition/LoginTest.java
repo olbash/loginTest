@@ -19,56 +19,39 @@ public class LoginTest {
         public LoginTest() throws IOException {
     }
 
-    @Given("User is on the login page - verify {string} displayed on the page")
-    public void userIsOnTheLoginPageVerifyDisplayedOnThePage(String loginText) {
+    @Given("User is on the login page")
+    public void userIsOnTheLoginPage() {
         //check that we're on the login page
-        Assert.assertTrue(lp.getLoginText().getText().contains(loginText));
+        Assert.assertTrue(lp.getLoginText().getText().contains("Welcome, Please Sign In!"));
     }
 
-    @When("user enter valid credentials and clicks on the Login button")
-    public void userEnterValidCredentialsAndClicksOnTheLoginButton() {
-        lp.enterValidEmail();
-        lp.enterValidPwd();
-        lp.checkRememberMeCheckbx();
-        lp.clickOnLoginBtn();
-    }
-
-    @Then("Home page appears")
-    public void homePageAppears() {
-        hp.verifyHomePageAppears();
-    }
-
-
-    @When("user enters invalid email and valid pwd and clicks on the Login button")
-    public void userEntersInvalidEmailAndValidPwdAndClicksOnTheLoginButton() {
-            lp.enterInvalidEmail();
-            lp.enterValidPwd();
+    @When("user enters valid credentials - email {string} and password {string}, and clicks on the Login button")
+    public void userEntersValidCredentialsEmailAndPasswordAndClicksOnTheLoginButton(String login, String pwd) {
+            lp.getEmailFld().sendKeys(login);
+            lp.getPasswdFld().sendKeys(pwd);
             lp.checkRememberMeCheckbx();
             lp.clickOnLoginBtn();
     }
 
 
-    @Then("error message {string} appears")
+    @Then("Home page appears")
+    public void homePageAppears() {
+        Assert.assertTrue(hp.getCustomerInfo().getText().contains("syst@email.com"));
+    }
+
+
+    @When("user logs in with login {string} and password {string}")
+    public void userLogsInWithLoginUsernameAndPasswordPassword(String login, String pwd) {
+        lp.getEmailFld().sendKeys(login);
+        lp.getPasswdFld().sendKeys(pwd);
+        lp.clickOnLoginBtn();
+    }
+
+
+    @Then("Error {string} appears")
     public void errorMessageAppears(String message) {
-        Assert.assertTrue(lp.getErrorNoCustomerAccount().getText().contains(message));
-    }
-
-    @When("user enters valid email and invalid pwd and clicks on the Login button")
-    public void userEntersValidEmailAndInvalidPwdAndClicksOnTheLoginButton() {
-            lp.enterValidEmail();
-            lp.enterInvalidPwd();
-            lp.clickOnLoginBtn();
+        Assert.assertTrue(lp.getErrMessage().getText().contains(message));
     }
 
 
-    @Then("the error message {string} appears")
-    public void theErrorMessageAppears(String message) {
-            Assert.assertTrue(lp.getErrorCredentialsAreIncorrect().getText().contains(message));
-    }
-
-
-    @When("user leaves email and pwd fields blank and clicks on the Login button")
-    public void userLeavesEmailAndPwdFieldsBlankAndClicksOnTheLoginButton() {
-            lp.clickOnLoginBtn();
-    }
 }

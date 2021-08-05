@@ -1,11 +1,5 @@
 package utils;
 
-
-import io.cucumber.java.After;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -24,19 +18,16 @@ public class Base {
         FileInputStream fis = new FileInputStream("C:\\Users\\o.basha\\IdeaProjects\\LoginTest\\src\\test\\java\\Utils\\conf.properties");
         prop.load(fis);
 
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\o.basha\\Chromedriver\\chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\o.basha\\Chromedriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get(prop.getProperty("url"));
         return driver;
+
+
     }
 
-//    @After
-//    //Close the browser
-//    public void tearDown() {
-//        if (driver != null) {
-//            driver.quit();
-//        }
-//    }
+
 
 
 }

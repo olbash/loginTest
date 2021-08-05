@@ -1,11 +1,9 @@
 package pageObject;
 
-import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utils.ConfProperties;
 
 public class HomePage {
     public WebDriver driver;
@@ -25,7 +23,5 @@ public class HomePage {
     }
 
     //Methods
-    public void verifyHomePageAppears(){
-        Assert.assertTrue(getCustomerInfo().getText().contains(ConfProperties.getProperty("email")));
-    }
+
 }

@@ -39,6 +39,9 @@ public class LoginPage {
     @FindBy(xpath = "//LI[text()='The credentials provided are incorrect']")
     private WebElement errorCredentialsAreIncorrect;
 
+    @FindBy(xpath = "//DIV[@class='validation-summary-errors']")
+    private WebElement errorsValidator;
+
     //Getters for the Web Elements
     public WebElement getLoginText() {
         return loginText;
@@ -57,26 +60,19 @@ public class LoginPage {
     }
     public WebElement getErrorNoCustomerAccount() { return errorNoCustomerAccount; }
     public WebElement getErrorCredentialsAreIncorrect() { return errorCredentialsAreIncorrect; }
+    public WebElement getErrorsValidator() {return errorsValidator; }
 
     //Test methods
-    public void enterValidEmail(){
-        getEmailFld().clear();
-        getEmailFld().sendKeys(ConfProperties.getProperty("email"));
-    }
 
-    public void enterInvalidEmail(){
-        getEmailFld().clear();
-        getEmailFld().sendKeys(ConfProperties.getProperty("invalidEmail"));
-    }
-
-    public void enterValidPwd(){
-        getPasswdFld().clear();
-        getPasswdFld().sendKeys(ConfProperties.getProperty("password"));
-    }
-
-    public void enterInvalidPwd(){
-        getPasswdFld().clear();
-        getPasswdFld().sendKeys(ConfProperties.getProperty("invalidPassword"));
+    public WebElement getErrMessage(){
+        String error = getErrorsValidator().getText();
+        if (error.contains("No customer account found")){
+            return getErrorNoCustomerAccount();
+        }else if (error.contains("The credentials provided are incorrect")){
+            return getErrorCredentialsAreIncorrect();
+        } else {
+            return null;
+        }
     }
 
     public void clickOnLoginBtn(){
