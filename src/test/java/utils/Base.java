@@ -1,5 +1,6 @@
 package utils;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -15,7 +16,7 @@ public class Base {
 
     public static WebDriver getDriver() throws IOException {
         prop = new Properties();
-        FileInputStream fis = new FileInputStream("C:\\Users\\o.basha\\IdeaProjects\\LoginTest\\src\\test\\java\\Utils\\conf.properties");
+        FileInputStream fis = new FileInputStream("src\\test\\java\\Utils\\conf.properties");
         prop.load(fis);
 
 //        System.setProperty("webdriver.chrome.driver", "C:\\Users\\o.basha\\Chromedriver\\chromedriver.exe");
