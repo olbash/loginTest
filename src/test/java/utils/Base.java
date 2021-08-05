@@ -12,7 +12,7 @@ import java.util.Properties;
 public class Base {
 
     public static WebDriver driver;
-    public static Properties prop; //it's a simple way, the better way see in GlobalProperties class
+    public static Properties prop;
 
     public static WebDriver getDriver() throws IOException {
         prop = new Properties();
