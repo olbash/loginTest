@@ -25,15 +25,6 @@ public class LoginTest {
         Assert.assertTrue(lp.getLoginText().getText().contains("Welcome, Please Sign In!"));
     }
 
-    @When("user enters valid credentials - email {string} and password {string}, and clicks on the Login button")
-    public void userEntersValidCredentialsEmailAndPasswordAndClicksOnTheLoginButton(String login, String pwd) {
-            lp.getEmailFld().sendKeys(login);
-            lp.getPasswdFld().sendKeys(pwd);
-            lp.checkRememberMeCheckbx();
-            lp.clickOnLoginBtn();
-    }
-
-
     @Then("Home page appears")
     public void homePageAppears() {
         Assert.assertTrue(hp.getCustomerInfo().getText().contains("syst@email.com"));
@@ -47,10 +38,9 @@ public class LoginTest {
         lp.clickOnLoginBtn();
     }
 
-
     @Then("Error {string} appears")
     public void errorMessageAppears(String message) {
-        Assert.assertTrue(lp.getErrMessage().getText().contains(message));
+        Assert.assertTrue(lp.getErrMessage().contains(message));
     }
 
 

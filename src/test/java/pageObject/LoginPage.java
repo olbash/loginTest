@@ -58,21 +58,13 @@ public class LoginPage {
     public WebElement getSubmitBtn() {
         return submitBtn;
     }
-    public WebElement getErrorNoCustomerAccount() { return errorNoCustomerAccount; }
-    public WebElement getErrorCredentialsAreIncorrect() { return errorCredentialsAreIncorrect; }
     public WebElement getErrorsValidator() {return errorsValidator; }
 
     //Test methods
 
-    public WebElement getErrMessage(){
+    public String getErrMessage(){
         String error = getErrorsValidator().getText();
-        if (error.contains("No customer account found")){
-            return getErrorNoCustomerAccount();
-        }else if (error.contains("The credentials provided are incorrect")){
-            return getErrorCredentialsAreIncorrect();
-        } else {
-            return null;
-        }
+        return error;
     }
 
     public void clickOnLoginBtn(){
